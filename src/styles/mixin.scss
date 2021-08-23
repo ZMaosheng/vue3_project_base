@@ -1,0 +1,38 @@
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@mixin scrollBar {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #72b9fc;
+    border-radius: 5px;
+  }
+}
+
+@mixin text-style(
+  $fontSize: 16px,
+  $lineHeight: 16px,
+  $color: rgba(0, 0, 0, 0.85)
+) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+}
+
+@mixin flex($direction: row, $alignItems: center, $justifyContent: flex-start) {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
